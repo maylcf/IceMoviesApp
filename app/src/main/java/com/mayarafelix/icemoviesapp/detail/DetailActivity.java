@@ -16,7 +16,6 @@ import com.mayarafelix.icemoviesapp.utils.UrlManager;
 public class DetailActivity extends AppCompatActivity
 {
     private Movie movie;
-    private String imdbId;
     private ImageView moviePoster;
     private TextView movieTitle;
     private TextView movieYear;
@@ -46,13 +45,13 @@ public class DetailActivity extends AppCompatActivity
         // View Elements
         //-------------------------------------------
 
-        moviePoster   = (ImageView) findViewById(R.id.movieDetailPoster);
-        movieTitle    = (TextView) findViewById(R.id.movieDetailTitle);
-        movieYear     = (TextView) findViewById(R.id.movieDetailYear);
-        movieGenre    = (TextView) findViewById(R.id.movieDetailGenre);
-        movieActors   = (TextView) findViewById(R.id.movieDetailActors);
-        movieDirector = (TextView) findViewById(R.id.movieDetailDirector);
-        moviePlot     = (TextView) findViewById(R.id.movieDetailPlot);
+        moviePoster   = findViewById(R.id.movieDetailPoster);
+        movieTitle    = findViewById(R.id.movieDetailTitle);
+        movieYear     = findViewById(R.id.movieDetailYear);
+        movieGenre    = findViewById(R.id.movieDetailGenre);
+        movieActors   = findViewById(R.id.movieDetailActors);
+        movieDirector = findViewById(R.id.movieDetailDirector);
+        moviePlot     = findViewById(R.id.movieDetailPlot);
         progressBar   = findViewById(R.id.progressbar);
 
         //-------------------------------------------
@@ -90,7 +89,7 @@ public class DetailActivity extends AppCompatActivity
         downloadImage.execute(imageUrl);
 
         //-------------------------------------------
-        // Get Image
+        // Get Information - If Empty
         //-------------------------------------------
 
         if (movie.getDirector().isEmpty() || movie.getGenre().isEmpty() || movie.getActors().isEmpty() || movie.getPlot().isEmpty())

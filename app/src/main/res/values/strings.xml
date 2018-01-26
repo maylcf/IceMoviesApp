@@ -9,5 +9,6 @@
     <string name="movie_year">Year:</string>
     <string name="movie_director">Director:</string>
     <string name="movie_plot">Plot:</string>
+    <string name="movie_poster">Poster</string>
 
 </resources>

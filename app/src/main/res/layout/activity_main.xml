@@ -37,19 +37,14 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="@dimen/movies_list_margin_top"
         android:clickable="true"
-        android:divider="@color/colorPrimary"
+        android:divider="@color/colorLightGray"
         android:dividerHeight="1dp"
         android:scrollingCache="false"
         android:smoothScrollbar="true" />
 
     <ProgressBar
+        style="@style/ProgressBar"
         android:id="@+id/progressbar"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="@color/colorAccent"
-        android:layout_gravity="center"
-        android:visibility="gone"
         android:layout_centerInParent="true"/>
 
 </RelativeLayout>
