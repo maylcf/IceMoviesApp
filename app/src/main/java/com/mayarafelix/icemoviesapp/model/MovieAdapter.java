@@ -58,10 +58,10 @@ public class MovieAdapter extends ArrayAdapter<Movie>
         // View Elements
         //-------------------------------------------
 
-        movieTitle     = (TextView) convertView.findViewById(R.id.movieTitle);
-        movieYear      = (TextView) convertView.findViewById(R.id.movieYear);
-        movieDirector  = (TextView) convertView.findViewById(R.id.movieDirector);
-        movieImage     = (ImageView) convertView.findViewById(R.id.movieThumbImage);
+        movieTitle     = convertView.findViewById(R.id.movieTitle);
+        movieYear      = convertView.findViewById(R.id.movieYear);
+        movieDirector  = convertView.findViewById(R.id.movieDirector);
+        movieImage     = convertView.findViewById(R.id.movieThumbImage);
 
         //-------------------------------------------
         // Update Value

@@ -31,7 +31,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
 {
     private DownloadMovies downloadMovies;
-    private JSONArray moviesJson;
     private EditText searchText;
     private ImageButton searchButton;
     private ListView moviesListView;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         moviesListView.setAdapter(adapter);
 
         //-------------------------------------------
-        // Search Button Action
+        // Search Button
         //-------------------------------------------
 
         searchButton.setOnClickListener(new View.OnClickListener()
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    // Populate the list of movies
     public void populateArrayOfMovies(@Nullable JSONArray moviesJson)
     {
         if (moviesJson == null)
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
             // Refresh listView
             adapter.notifyDataSetChanged();
 
-            // Get Image and other information about each the movie
+            // Get Image and other information about each the movie ( like director)
             for (int i = 0; i < moviesList.size(); i++)
             {
                 // Get information
@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    // Hide the keyboard
     private void hideKeyboard()
     {
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Activity.INPUT_METHOD_SERVICE);
