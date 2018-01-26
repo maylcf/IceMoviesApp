@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">  Ice Movies</string>
+    <string name="movie_title_hint">Movie Title</string>
+    <string name="movie_not_found">Movie not found!</string>
+
+    <!-- Detail -->
+    <string name="movie_genre">Genre:</string>
+    <string name="movie_actors">Actors:</string>
+    <string name="movie_year">Year:</string>
+    <string name="movie_director">Director:</string>
+    <string name="movie_plot">Plot:</string>
+
+</resources>
